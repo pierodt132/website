@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
+
+</head>
+<body>
+ <h1>Bienvenido a jQuery</h1>
+ <h2>Aprendiendo un nuevo framework</h2> 
+
+ <nav>
+    <ul>
+        <li><a href="#" class="boton1">Aplicar formato 1</a></li>
+        <li><a href="#" class="boton2">Aplicar formato 2</a></li>
+        <li><a href="#" class="boton3">Ocultar contenedor</a></li>
+        <li><a href="#" class="boton4">Mostrar contenedor</a></li>
+        <li><a href="#" class="boton5">Mostrar / Ocultar contenedor</a></li>
+    </ul>
+ </nav>
+
+ <div class="contenedor">
+    <p id="parrafo1">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Libero deleniti, impedit nisi at ab sunt pariatur qui fugit sint quisquam maxime sapiente, non aut officiis. Nam laudantium enim distinctio alias.</p>
+
+ <p id="parrafo2">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Libero deleniti, impedit nisi at ab sunt pariatur qui fugit sint quisquam maxime sapiente, non aut officiis. Nam laudantium enim distinctio alias.</p>
+ </div>
+
+ <script>
+    $('h1').css('color','red');
+    $('h2').css('color','blue');
+    $('#parrafo1').css('background','yellow');
+    $('#parrafo2').css('background','red');
+
+    //Aplicar el formato , USAREMOS UNA FUNCION
+    $('.boton1').click(function(){
+        $('.contenedor').css({
+            'width':'550px',
+            'height':'450px',
+            'padding': '10px',
+            'margin': 'auto',
+            'background':'skyblue'
+        });
+    });
+
+
+    //Aplicar el formato , USAREMOS UNA FUNCION
+    $('.boton2').click(function(){
+        $('.contenedor').css({
+            'width':'450px',
+            'height':'550px',
+            'padding': '20px',
+            'margin': 'auto',
+            'background':'pink'
+        });
+    });
+
+    //Ocultar contenedor
+    $('.boton3').click(function(){
+        $('.contenedor').hide(1000);
+    });
+
+    //Mostrar contenedor
+    $('.boton4').click(function(){
+        $('.contenedor').show(800);
+    });
+
+   //Mostrar contenedor y ocultar
+   $('.boton5').click(function(){
+        $('.contenedor').toggle(2000);
+    });
+
+
+
+ </script>
+
+</body>
+</html>

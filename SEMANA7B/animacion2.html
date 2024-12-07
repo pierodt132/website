@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
+    <style>
+      .contenedor{
+        width: 800px;
+        height: 600px;
+        background-color: cornflowerblue;
+        margin: 50px auto;
+      }
+    </style>
+</head>
+<body>
+    <button id="nosotros">Nosotros</button>
+    <button id="slideToggle">slideToggle</button>
+   
+    
+    <div class="contenedor"></div>
+
+    <script>
+        //animar al cargar la página
+
+        $('.contenedor').animate({
+            width:'900px',
+            height:'700px',
+            backgroundColor:"red"
+
+        },2000);
+
+        //Animar al hacer click en el boton
+        $('#nosotros').click(function(){
+            //animar la salida de la pagina
+            $('.contenedor').animate({
+                opacity:0
+            },1000,function(){
+                window.location.href="intro.html";
+            
+            });
+        });
+
+        //Efecto slideToggle
+        $('#slideToggle').click(function(){
+            $('.contenedor').slideToggle(2000,"swing");
+        });
+
+    </script>
+    
+</body>
+</html>

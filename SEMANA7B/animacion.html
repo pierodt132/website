@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
+    <style>
+        .pelota{
+            background-color: cadetblue;
+            width: 120px;
+            height: 120px;
+            border-radius: 100%;
+            /*animation: animaPelota 2s infinite;*/
+        }
+
+        @keyframes animaPelota{
+            0%{transform: translate(200px,50px);}
+            25%{transform: translate(400px,0px);}
+            50%{transform: translate(600px,50px);}
+            75%{transform: translate(800px,80px);}
+            100%{transform: translate(0px,50px);}
+        }
+    </style>
+</head>
+<body>
+    <button id="boton1">Iniciar</button>
+    <button id="boton2">Parar</button>
+    
+    <div class="pelota"></div>
+
+    <script>
+
+        $('#boton1').click(function(){
+            //opcion1
+            $('.pelota').css('animation','animaPelota 2s infinite');
+        })
+        
+        $('#boton2').click(function(){
+            //opcion1
+            $('.pelota').css('animation-play-state','paused');
+        })
+
+    </script>
+    
+</body>
+</html>
